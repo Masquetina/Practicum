@@ -1,0 +1,59 @@
+.auth, .btn-primary,
+.form-auth input[type='email'],
+.form-auth input[type='password'] {
+  border-radius: 2px;
+}
+.form-auth {
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .container-fluid {
+    background-color: #ebf3f9;
+  }
+  .auth {
+    margin: 32px 0;
+  }
+  .form-auth {
+    padding: 16px 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .auth {
+    border: solid 1px #ddd;
+    background-color: #ebf3f9;
+    margin: 64px 0;
+  }
+  .form-auth {
+    padding: 12px 24px 28px 24px;
+  }
+}
+.btn-primary:enabled,
+.btn-primary:disabled {
+  border: none;
+  position: relative;
+  -webkit-transition: all 0s ease-out;
+  -moz-transition: all 0s ease-out;
+  -o-transition: all 0s ease-out;
+  -ms-transition: all 0s ease-out;
+  transition: all 0s ease-out;
+  background-color: #337ab7;
+  -webkit-box-shadow: 0 4px 0 0 #275d8c;
+  box-shadow: 0 4px 0 0 #275d8c;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  border: none;
+  outline: none;
+  background-color: #337ab7;
+  top: 2px;
+  -webkit-box-shadow: 0 2px 0 0 #275d8c;
+  box-shadow: 0 2px 0 0 #275d8c;
+}
+.btn-primary:active {
+  border: none !important;
+  outline: none !important;
+  background-color: #337ab7 !important;
+  top: 3px;
+  -webkit-box-shadow: 0 1px 0 0 #275d8c;
+  box-shadow: 0 1px 0 0 #275d8c;
+}

@@ -10,18 +10,33 @@
   {{/unless}}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/loader.css">
 </head>
 <body>
-  <app-root>Loading...</app-root>
-  
+  <todo-root>
+    <div class="loader"></div>
+  </todo-root>
+
     {{#each scripts.polyfills}}
-    <script src="{{.}}"></script>
+  <script src="{{.}}"></script>
     {{/each}}
-    <script>
+  <script>
       System.import('system-config.js').then(function () {
         System.import('main');
       }).catch(console.error.bind(console));
-    </script>
-  
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAk7dtfft0ewIZT54NOvzfgiu1uM-3gSHo",
+      authDomain: "todoback-54cab.firebaseapp.com",
+      databaseURL: "https://todoback-54cab.firebaseio.com",
+      storageBucket: "",
+    };
+    firebase.initializeApp(config);
+  </script>
 </body>
 </html>

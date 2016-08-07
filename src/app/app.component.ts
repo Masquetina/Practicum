@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
+import { ROUTER_DIRECTIVES } from "@angular/router";
+
+import { TopNavComponent } from "./top-nav";
+import { ItemService } from "./protected/item.service";
 
 @Component({
   moduleId: module.id,
-  selector: 'app-root',
+  selector: 'todo-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css']
+  directives: [ROUTER_DIRECTIVES, TopNavComponent],
+  providers: [ItemService]
 })
+
 export class AppComponent {
-  title = 'app works!';
+
 }

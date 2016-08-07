@@ -1,0 +1,11 @@
+<h1>Protected</h1>
+<ol style="margin: 8px 0;" class="breadcrumb">
+  <li><a [routerLink]="['/protected']">Go back</a></li>
+</ol>
+<div style="border: none;" class="list-group-item">
+  <h4>{{selectedItem?.name}}</h4>
+  <p>{{selectedItem?.description}}</p>
+  <div style="margin: 8px 0;" class="list-group-item" *ngFor="let comment of selectedItem?.comments">
+    <p class="list-group-item-text">{{comment.text}}</p>
+  </div>
+</div>

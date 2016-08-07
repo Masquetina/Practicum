@@ -9,10 +9,15 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'moment': 'vendor/moment/moment.js',
+  'ng2-bootstrap': 'vendor/ng2-bootstrap/ng2-bootstrap'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'vendor/ng2-bootstrap': {
+    defaultExtension: 'js'
+  }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -32,10 +37,17 @@ const barrels: string[] = [
 
   // Thirdparty barrels.
   'rxjs',
+  'ng2-bootstrap',
 
   // App specific barrels.
   'app',
   'app/shared',
+  'app/top-nav',
+  'app/login',
+  'app/signup',
+  'app/protected',
+  'app/protected/list',
+  'app/protected/detail',
   /** @cli-barrel */
 ];
 
